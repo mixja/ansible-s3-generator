@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  lambda:
+    build:
+      context: ../../
+      dockerfile: docker/test/Dockerfile
+      args:
+        project_name: ${PROJECT_NAME}
+        function_name: ${FUNCTION_NAME}
+    command: "true"
